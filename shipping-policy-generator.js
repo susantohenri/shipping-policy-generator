@@ -1,10 +1,14 @@
-$(document).ready(function () {
-    let step = $('.step')
-    let backBtn = $('#back_btn')
-    let nextBtn = $('#next_btn')
-    let publishBtn = $('#publish_btn')
-    let previewBtn = $('#preview_btn')
-    let form = $('#shipping_policy_form')
+jQuery(document).ready(function () {
+    jQuery('#btn_shipping_form').click(function () {
+        jQuery(this).hide()
+        jQuery(this).siblings().show()
+    })
+
+    let step = jQuery('#shipping_policy_generator .step')
+    let backBtn = jQuery('#shipping_policy_generator #back_btn')
+    let nextBtn = jQuery('#shipping_policy_generator #next_btn')
+    let previewBtn = jQuery('#shipping_policy_generator #preview_btn')
+    let form = jQuery('#shipping_policy_generator #shipping_policy_form')
 
     let data_answer = {
         official_location: '',
@@ -29,13 +33,7 @@ $(document).ready(function () {
 
     generate_shipping_policy(data_answer)
 
-    publishBtn.on('click', function () {
-        console.log(data_answer)
-        generate_shipping_policy(data_answer)
-    })
-
     previewBtn.on('click', function () {
-        console.log(data_answer)
         generate_shipping_policy(data_answer)
     })
 
@@ -59,7 +57,6 @@ $(document).ready(function () {
     })
 
     function toggle_show_hide_step(currentStep) {
-        console.log(currentStep)
         step.eq(currentStep).removeClass('d-none').siblings().addClass('d-none')
         toggle_nav_current(currentStep)
 
@@ -80,33 +77,33 @@ $(document).ready(function () {
         if (currentStep >= 0 && currentStep <= 4) dataNav = 0
         else if (currentStep >= 5 && currentStep <= 5) dataNav = 1
 
-        $(`a[data-nav="${dataNav}"`).addClass('bg-white').siblings().removeClass('bg-white')
+        jQuery(`a[data-nav="${dataNav}"`).addClass('bg-white').siblings().removeClass('bg-white')
     }
 
     function progress(value) {
-        $('#progress_bar').width(value + '%')
-        $('#progress_bar').html(value + '%')
+        jQuery('#shipping_policy_generator #progress_bar').width(value + '%')
+        jQuery('#shipping_policy_generator #progress_bar').html(value + '%')
     }
 
     // question 1
-    $('input[name="official_location"').on('click', function () {
+    jQuery('#shipping_policy_generator input[name="official_location"').on('click', function () {
         data_answer = {
             ...data_answer,
-            official_location: $(this).val(),
+            official_location: jQuery(this).val(),
         }
-        if ($('#q_1_others').is(':checked')) {
-            $('#q_1_others_text').removeClass('d-none')
+        if (jQuery('#shipping_policy_generator #q_1_others').is(':checked')) {
+            jQuery('#shipping_policy_generator #q_1_others_text').removeClass('d-none')
         } else {
-            $('#q_1_others_text').addClass('d-none')
+            jQuery('#shipping_policy_generator #q_1_others_text').addClass('d-none')
         }
     })
 
-    $('#q_1_others_text_input').on('keyup', function (e) {
+    jQuery('#shipping_policy_generator #q_1_others_text_input').on('keyup', function (e) {
         data_answer = {
             ...data_answer,
             official_location: e.target.value,
         }
-        $('#q_1_others').val(e.target.value)
+        jQuery('#shipping_policy_generator #q_1_others').val(e.target.value)
     })
 
 
@@ -254,8 +251,8 @@ $(document).ready(function () {
                             <div class="shipping-policy-section"></div>
                         </div>
                     `
-        $('.preview-content').html(template)
+        jQuery('#shipping_policy_generator .preview-content').html(template)
 
-        $('#shipping_policy_template').html(template)
+        jQuery('#shipping_policy_generator #shipping_policy_template').html(template)
     }
 })
