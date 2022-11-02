@@ -2,9 +2,9 @@ $(document).ready(function () {
     let step = $('.step')
     let backBtn = $('#back_btn')
     let nextBtn = $('#next_btn')
-    let publishBtn = $('#publish_btn')
     let previewBtn = $('#preview_btn')
     let form = $('#shipping_policy_form')
+    let doneBtn = $('#done_btn')
 
     let data_answer = {
         official_location: '',
@@ -28,11 +28,6 @@ $(document).ready(function () {
     })
 
     generate_shipping_policy(data_answer)
-
-    publishBtn.on('click', function () {
-        console.log(data_answer)
-        generate_shipping_policy(data_answer)
-    })
 
     previewBtn.on('click', function () {
         console.log(data_answer)
@@ -66,12 +61,15 @@ $(document).ready(function () {
         if (currentStep === 0) {
             backBtn.addClass('d-none')
             nextBtn.removeClass('d-none')
+            doneBtn.addClass('d-none')
         } else if (currentStep === totalSteps - 1) {
             nextBtn.addClass('d-none')
             backBtn.removeClass('d-none')
+            doneBtn.removeClass('d-none')
         } else {
             backBtn.removeClass('d-none')
             nextBtn.removeClass('d-none')
+            doneBtn.addClass('d-none')
         }
     }
 

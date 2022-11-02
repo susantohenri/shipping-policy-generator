@@ -44,3 +44,11 @@
 .preview-content .shipping-policy-section {
     padding-bottom: 6px;
 }
+
+#result_modal .modal-fullscreen {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    height: 85%;
+}

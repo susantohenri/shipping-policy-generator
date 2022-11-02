@@ -42,9 +42,7 @@
         </div>
         <div class="flex-fill bg-white py-4 px-5">
             <div class="d-flex justify-content-between">
-                <h3>Shipping Policy</h3>
-                <button id="publish_btn" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#result_modal">PUBLISH</button>
+                <h3 class="text-uppercase">Shipping Policy</h3>
 
                 <div class="modal fade" id="result_modal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-fullscreen">
@@ -56,9 +54,6 @@
                             </div>
                             <div class="modal-body">
                                 <div id="shipping_policy_template"></div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -248,6 +243,7 @@
                             </div>
                             <div>
                                 <button id="next_btn" class="btn btn-primary">NEXT</button>
+                                <button id="done_btn" class="btn btn-primary d-none">DONE</button>
                             </div>
                         </div>
                     </form>
