@@ -77,8 +77,22 @@ $(document).ready(function () {
         let dataNav = 0
         if (currentStep >= 0 && currentStep <= 4) dataNav = 0
         else if (currentStep >= 5 && currentStep <= 5) dataNav = 1
+        else if (currentStep >= 6 && currentStep <= 7) dataNav = 2
+        else if (currentStep >= 8 && currentStep <= 12) dataNav = 3
+        else if (currentStep >= 13 && currentStep <= 15) dataNav = 4
+        else if (currentStep >= 16 && currentStep <= 16) dataNav = 5
+        else if (currentStep >= 17 && currentStep <= 18) dataNav = 6
+        else if (currentStep >= 19 && currentStep <= 20) dataNav = 7
+        else if (currentStep >= 21 && currentStep <= 21) dataNav = 8
+        else if (currentStep >= 22) dataNav = 9
 
-        $(`a[data-nav="${dataNav}"`).addClass('bg-white').siblings().removeClass('bg-white')
+        if (currentStep >= 25) {
+            progress(100)
+        } else {
+            progress(dataNav * 10)
+        }
+        
+        $(`a[data-nav="${dataNav}"`).addClass('bg-white text-primary').siblings().removeClass('bg-white text-primary')
     }
 
     function progress(value) {
