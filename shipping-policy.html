@@ -16,6 +16,40 @@
 </head>
 
 <body>
+    <div id="result" class="d-none">
+        <div class="row m-0">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center vh-100">
+                    <div class="p-5">
+                        <div class="mb-4">
+                            <h1>Here's your new policy</h1>
+                            <p class="" style="font-size: 20px;">Click the button below to copy your shipping policy</p>
+                        </div>
+
+                        <button class="btn-copy text-uppercase">COPY TO CLIPBOARD</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex flex-column justify-content-center vh-100 gap-4 pe-5">
+                    <div class="shadow p-4" style="height: 70vh;">
+                        <div class="border-bottom pb-2">
+                            <h3>Shipping Policy</h3>
+                        </div>
+                        <div class="my-4" style="overflow: auto; height: 80%;">
+                            <div class="shipping_policy_template result-preview"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-muted">
+                            These sample policies should not be taken as legal advice. By using this for your store, you agree to <a href=""></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="d-flex">
         <div class="bg-light pt-4 min-vh-100">
             <div class="px-4 pb-3 border-bottom" style="width: 200px;">
@@ -53,7 +87,7 @@
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <div id="shipping_policy_template"></div>
+                                <div class="shipping_policy_template"></div>
                             </div>
                         </div>
                     </div>

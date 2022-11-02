@@ -1,3 +1,27 @@
+#result .result-preview {
+    font-size: 12px;
+}
+
+#result .result-preview h1{
+    font-size: 16px;
+}
+
+#result .result-preview h2{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+#result .result-preview h4{
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.btn-copy {
+    background-color: #ff9100;
+    padding: 6px 18px;
+    border: none;
+}
+
 .form-check-label {
     cursor: pointer;
 }

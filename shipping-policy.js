@@ -38,6 +38,10 @@ $(document).ready(function () {
         }
     })
 
+    doneBtn.on('click', function() {
+        $('#result').removeClass('d-none').siblings().addClass('d-none')
+    })
+
     function toggle_show_hide_step(currentStep) {
         console.log('currentStep', currentStep)
         step.eq(currentStep).removeClass('d-none').siblings().addClass('d-none')
@@ -265,6 +269,6 @@ $(document).ready(function () {
                     `
         $('.preview-content').html(template)
 
-        $('#shipping_policy_template').html(template)
+        $('.shipping_policy_template').html(template)
     }
 })
