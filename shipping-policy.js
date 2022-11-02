@@ -6,22 +6,7 @@ $(document).ready(function () {
     let form = $('#shipping_policy_form')
     let doneBtn = $('#done_btn')
 
-    let data_answer = {
-        official_location: '',
-        how_to_change_order: '',
-        days_to_process: '',
-        contact_form: '',
-        payment_method: '',
-        supported_currencies: '',
-        shipping_options: '',
-        filing_exchange_request: '',
-        return_process: '',
-        return_processing_time: '',
-        how_long_return_policy_last: '',
-        affiliate_program: '',
-        physical_store: '',
-        warranty: '',
-    }
+    let data_answer = {}
 
     form.on('submit', function (e) {
         return false
@@ -54,7 +39,7 @@ $(document).ready(function () {
     })
 
     function toggle_show_hide_step(currentStep) {
-        console.log(currentStep)
+        console.log('currentStep', currentStep)
         step.eq(currentStep).removeClass('d-none').siblings().addClass('d-none')
         toggle_nav_current(currentStep)
 
@@ -100,25 +85,37 @@ $(document).ready(function () {
         $('#progress_bar').html(value + '%')
     }
 
-    // question 1
-    $('input[name="official_location"').on('click', function () {
-        data_answer = {
-            ...data_answer,
-            official_location: $(this).val(),
-        }
-        if ($('#q_1_others').is(':checked')) {
-            $('#q_1_others_text').removeClass('d-none')
-        } else {
-            $('#q_1_others_text').addClass('d-none')
-        }
+    $('.form-check').each(function() {
+        $(this).find('input[type="radio"]').on('click', function() {
+            let name = $(this).attr('name')
+            let value = $(this).val()
+            data_answer = {
+                ...data_answer,
+                [name]: value,
+            }
+
+            if ($(this).parent().hasClass('form-others')) {
+                console.log($(this).parent().find($('.form-group')).find($('input[type="text"]')))
+                $(this).parent().find($('.form-group')).removeClass('d-none')
+
+                $(this).parent().find($('.form-group')).find($('input[type="text"]')).on('keyup', function(e) {
+                    data_answer = {
+                        ...data_answer,
+                        [name]: e.target.value,
+                    }
+                })
+            } else {
+                $(this).parent().parent().find($('.form-group')).addClass('d-none')
+            }
+        })
     })
 
-    $('#q_1_others_text_input').on('keyup', function (e) {
+    $('input[name="website_url"').on('keyup', function (e) {
+        let name = $(this).attr('name')
         data_answer = {
             ...data_answer,
-            official_location: e.target.value,
+            [name]: e.target.value,
         }
-        $('#q_1_others').val(e.target.value)
     })
 
 
