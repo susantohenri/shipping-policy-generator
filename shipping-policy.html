@@ -182,27 +182,22 @@
                                 </h5>
 
                                 <div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="can_customers_change_order"
-                                            id="q_4_a" value="Yes, customizations post order is available">
+                                    <div class="form-check form-textarea">
+                                        <input class="form-check-input" type="radio" name="change_order"
+                                            id="q_4_a" value="Yes">
                                         <label class="form-check-label" for="q_4_a">
                                             Yes, customizations post order is available
                                         </label>
+                                        <div class="form-group d-none">
+                                            <label class="text-muted">Please specify how to change order</label>
+                                            <textarea class="form-control" rows="5"></textarea>
+                                        </div>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="can_customers_change_order"
-                                            id="q_4_b" value="No, customizations are not available post order">
+                                        <input class="form-check-input" type="radio" name="change_order"
+                                            id="q_4_b" value="No">
                                         <label class="form-check-label" for="q_4_b">
                                             No, customizations are not available post order
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="can_customers_change_order"
-                                            id="q_4_c"
-                                            value="Customizations are available on special request. The customer must contact our team">
-                                        <label class="form-check-label" for="q_4_c">
-                                            Customizations are available on special request. The customer must contact
-                                            our team
                                         </label>
                                     </div>
                                 </div>
@@ -216,7 +211,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio"
                                         name="how_long_does_an_order_take_to_dispatch" id="q_5_a"
-                                        value="Same day dispatch">
+                                        value="same day dispatch">
                                     <label class="form-check-label" for="q_5_a">
                                         Same day dispatch
                                     </label>
@@ -224,7 +219,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio"
                                         name="how_long_does_an_order_take_to_dispatch" id="q_5_b"
-                                        value="Dispatched depending on inventory">
+                                        value="dispatched depending on inventory">
                                     <label class="form-check-label" for="q_5_b">
                                         Dispatched depending on inventory
                                     </label>
@@ -232,7 +227,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio"
                                         name="how_long_does_an_order_take_to_dispatch" id="q_5_c"
-                                        value="Dispatched in a standard two days post order placement">
+                                        value="dispatched in a standard two days post order placement">
                                     <label class="form-check-label" for="q_5_c">
                                         Dispatched in a standard two days post order placement
                                     </label>
@@ -240,7 +235,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio"
                                         name="how_long_does_an_order_take_to_dispatch" id="q_5_d"
-                                        value="Dispatch is dependent on the location of delivery">
+                                        value="dispatch is dependent on the location of delivery">
                                     <label class="form-check-label" for="q_5_d">
                                         Dispatch is dependent on the location of delivery
                                     </label>
@@ -408,7 +403,7 @@
                                             30 days
                                         </label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-others">
                                         <input class="form-check-input" type="radio" id="q_10_d"
                                             name="how_long_does_customer_raise_exchange_request" value="">
                                         <label class="form-check-label" for="q_10_d">
@@ -477,7 +472,7 @@
                                             30 days
                                         </label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-others">
                                         <input class="form-check-input" type="radio" id="q_11_d"
                                             name="how_long_does_customer_raise_return_request" value="">
                                         <label class="form-check-label" for="q_11_d">
@@ -491,23 +486,23 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio"
                                             name="how_long_does_customer_raise_return_request" id="q_11_e"
-                                            value="We have a no exchange policy">
+                                            value="We have a no return policy">
                                         <label class="form-check-label" for="q_11_e">
-                                            We have a no exchange policy
+                                            We have a no return policy
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio"
                                             name="how_long_does_customer_raise_return_request" id="q_11_f"
-                                            value="We have a no exchange policy on certain products">
+                                            value="We have a no return policy on certain products">
                                         <label class="form-check-label" for="q_11_f">
-                                            We have a no exchange policy on certain products
+                                            We have a no return policy on certain products
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio"
                                             name="how_long_does_customer_raise_return_request" id="q_11_g"
-                                            value="Exchange requests need to be generated by contacting our team directly ">
+                                            value="Return requests need to be generated by contacting our team directly">
                                         <label class="form-check-label" for="q_11_g">
                                             Return requests need to be generated by contacting our team directly
                                         </label>
@@ -581,29 +576,29 @@
 
                                 <div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="what_forms_of_payments"
-                                            id="q_14_a" value="Online payments only">
+                                        <input class="form-check-input" type="radio" name="forms_of_payments"
+                                            id="q_14_a" value="online payments only">
                                         <label class="form-check-label" for="q_14_a">
                                             Online payments only
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="what_forms_of_payments"
-                                            id="q_14_b" value="Cash on delivery is available">
+                                        <input class="form-check-input" type="radio" name="forms_of_payments"
+                                            id="q_14_b" value="cash on delivery">
                                         <label class="form-check-label" for="q_14_b">
                                             Cash on delivery is available
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="what_forms_of_payments"
-                                            id="q_14_c" value="Net banking options are available">
+                                        <input class="form-check-input" type="radio" name="forms_of_payments"
+                                            id="q_14_c" value="net banking options">
                                         <label class="form-check-label" for="q_14_c">
                                             Net banking options are available
                                         </label>
                                     </div>
                                     <div class="form-check form-others">
                                         <input class="form-check-input" type="radio" id="q_14_d"
-                                            name="what_forms_of_payments" value="">
+                                            name="forms_of_payments" value="">
                                         <label class="form-check-label" for="q_14_d">
                                             Others
                                         </label>
@@ -623,28 +618,28 @@
 
                                 <div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="what_payment_currencies"
+                                        <input class="form-check-input" type="radio" name="payment_currencies"
                                             id="q_15_a" value="In Dollars">
                                         <label class="form-check-label" for="q_15_a">
                                             In Dollars
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="what_payment_currencies"
+                                        <input class="form-check-input" type="radio" name="payment_currencies"
                                             id="q_15_b" value="In Euros">
                                         <label class="form-check-label" for="q_15_b">
                                             In Euros
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="what_payment_currencies"
+                                        <input class="form-check-input" type="radio" name="payment_currencies"
                                             id="q_15_c" value="In Pounds">
                                         <label class="form-check-label" for="q_15_c">
                                             In Pounds
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="what_payment_currencies"
+                                        <input class="form-check-input" type="radio" name="payment_currencies"
                                             id="q_15_d" value="All international currency payments are accepted">
                                         <label class="form-check-label" for="q_15_d">
                                             All international currency payments are accepted
@@ -652,7 +647,7 @@
                                     </div>
                                     <div class="form-check form-others">
                                         <input class="form-check-input" type="radio" id="q_15_e"
-                                            name="what_payment_currencies" value="">
+                                            name="payment_currencies" value="">
                                         <label class="form-check-label" for="q_15_e">
                                             Others
                                         </label>
@@ -737,14 +732,14 @@
                                 <div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio"
-                                            name="offer_international_shipping_services" id="q_18_a" value="Yes">
+                                            name="international_shipping" id="q_18_a" value="Yes">
                                         <label class="form-check-label" for="q_18_a">
                                             Yes
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio"
-                                            name="offer_international_shipping_services" id="q_18_b" value="No">
+                                            name="international_shipping" id="q_18_b" value="No">
                                         <label class="form-check-label" for="q_18_b">
                                             No
                                         </label>
@@ -878,25 +873,29 @@
                                 <div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio"
-                                            name="customer_get_in_touch_with_you" id="q_22_a" value="Phone">
+                                            name="customer_get_in_touch_with_you" id="q_22_a" value="phone">
                                         <label class="form-check-label" for="q_22_a">
                                             Phone
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio"
-                                            name="customer_get_in_touch_with_you" id="q_22_b" value="Email">
+                                            name="customer_get_in_touch_with_you" id="q_22_b" value="email">
                                         <label class="form-check-label" for="q_22_b">
                                             Email
                                         </label>
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check form-others">
                                         <input class="form-check-input" type="radio"
                                             name="customer_get_in_touch_with_you" id="q_22_c"
-                                            value="We have a contact form">
+                                            value="">
                                         <label class="form-check-label" for="q_22_c">
                                             We have a contact form
                                         </label>
+                                        <div class="form-group">
+                                            <label class="text-muted">Please specify in the section below</label>
+                                            <input type="text" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -981,25 +980,22 @@
                                 </h5>
 
                                 <div>
-                                    <div class="form-check">
+                                    <div class="form-check form-others">
                                         <input class="form-check-input" type="radio" name="physical_store" id="q_25_a"
-                                            value="Yes">
+                                            value="">
                                         <label class="form-check-label" for="q_25_a">
                                             Yes
                                         </label>
+                                        <div class="form-group d-none">
+                                            <label class="text-muted">Please specify in the section below</label>
+                                            <input type="text" class="form-control">
+                                        </div>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="physical_store" id="q_25_b"
                                             value="No">
                                         <label class="form-check-label" for="q_25_b">
                                             No
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="physical_store" id="q_25_c"
-                                            value="We have stores in specific cities (details provided on the website)">
-                                        <label class="form-check-label" for="q_25_c">
-                                            We have stores in specific cities (details provided on the website)
                                         </label>
                                     </div>
                                 </div>

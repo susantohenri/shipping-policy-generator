@@ -2,16 +2,20 @@
     font-size: 12px;
 }
 
-#result .result-preview h1{
-    font-size: 16px;
+#result .result-preview .shipping-policy-section {
+    padding-bottom: 0px;
 }
 
 #result .result-preview h2{
+    font-size: 16px;
+}
+
+#result .result-preview h4{
     font-size: 14px;
     margin-bottom: 4px;
 }
 
-#result .result-preview h4{
+#result .result-preview h6{
     font-size: 12px;
     margin-bottom: 4px;
 }
@@ -32,8 +36,12 @@
     font-weight: 500;
 }
 
+.shipping-policy-title {
+    padding-bottom: 12px;
+}
+
 .shipping-policy-section {
-    padding-bottom: 10px;
+    padding-bottom: 26px;
 }
 
 .preview-content {
@@ -44,16 +52,16 @@
     padding: 10px;
 }
 
-.preview-content h1 {
+.preview-content h2 {
     font-size: 8px;
 }
 
-.preview-content h2 {
+.preview-content h4 {
     font-size: 6px;
     margin-bottom: 4px;
 }
 
-.preview-content h4 {
+.preview-content h6 {
     font-size: 4px;
 }
 
@@ -63,6 +71,10 @@
 
 .preview-content p {
     margin-bottom: 4px;
+}
+
+.preview-content .shipping-policy-title {
+    padding-bottom: 4px;
 }
 
 .preview-content .shipping-policy-section {
