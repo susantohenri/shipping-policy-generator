@@ -249,7 +249,7 @@ $(document).ready(function () {
                                 You can select the best shipping method for your needs when you order from our store. We offer the following shipping options:
                             </p>
 
-                            ${data.shipping_options}
+                            ${data.shipping_work}
 
                             <h6>Shipping Costs</h6>
                             <p>
@@ -278,21 +278,45 @@ $(document).ready(function () {
                             <p>
                                 Our team is happy to entertain exchanges if the product is damaged or doesn’t meet the description. You can request us to exchange your order using the steps below:
                             </p>
-                            ${data.filing_exchange_request}
+                            ${(() => {
+                                switch (data.how_long_does_customer_raise_exchange_request) {
+                                    case 'We have a no exchange policy':
+                                        return ''
+                                    case 'We have a no exchange policy on certain products':
+                                        return ''
+                                    default:
+                                        return `
+                                            <p>
+                                                ${data.how_long_does_customer_raise_exchange_request}
+                                            </p>
+                                        `
+                                }
+                            })()}
                         </div>
                         <div class="shipping-policy-section">
                             <h4>Returns</h4>
                             <p>
                                 We are glad to help you return your product if it turns out to be damaged. You may also be able to request returns for items that don’t match the product description. Follow the steps below to file a return request:
                             </p>
-                            <p>
-                                ${data.return_process}
-                            </p>
+                            ${(() => {
+                                switch (data.how_long_does_customer_raise_return_request) {
+                                    case 'We have a no return policy':
+                                        return ''
+                                    case 'We have a no return policy on certain products':
+                                        return ''
+                                    default:
+                                        return `
+                                            <p>
+                                                ${data.how_long_does_customer_raise_return_request}
+                                            </p>
+                                        `
+                                }
+                            })()}
                             <p>
                                 You can return or exchange your item for free if it is damaged or different from the description. However, in other cases, you may need to pay for the shipping charges. 
                             </p>
                             <p>
-                                Additionally, we may take ${data.return_processing_time} business days to process returns and exchanges.
+                                Additionally, we may take ${data.how_long_does_it_take_to_initiate_return_exchange} business days to process returns and exchanges.
                             </p>
                             <p>
                                 Our team holds the ultimate right to decide whether to entertain your return or exchange request. We shall convey our decision and the cause regardless.
