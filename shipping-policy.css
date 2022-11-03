@@ -26,6 +26,10 @@
     border: none;
 }
 
+.btn-copy:focus {
+    opacity: 0.5;
+}
+
 .form-check-label {
     cursor: pointer;
 }
