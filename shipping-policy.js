@@ -5,8 +5,11 @@ $(document).ready(function () {
     let previewBtn = $('#preview_btn')
     let form = $('#shipping_policy_form')
     let doneBtn = $('#done_btn')
+    let copy = $('#copy_btn')
 
     let data_answer = {}
+    let currentStep = 0
+    let totalSteps = step.length
 
     form.on('submit', function (e) {
         return false
@@ -19,8 +22,18 @@ $(document).ready(function () {
         generate_shipping_policy(data_answer)
     })
 
-    let currentStep = 0
-    let totalSteps = step.length
+    copy.on('click', function () {
+        let temp = $('<div></div>')
+        $('body').append(temp)
+        temp.attr('contenteditable', true)
+            .html($('#result .shipping_policy_template').html()).select()
+            .on('focus', function() {
+                document.execCommand('selectAll', false, null)
+            })
+            .focus()
+        document.execCommand('copy')
+        temp.remove()
+    })
 
     toggle_show_hide_step(currentStep)
 
@@ -40,6 +53,7 @@ $(document).ready(function () {
 
     doneBtn.on('click', function () {
         $('#result').removeClass('d-none').siblings().addClass('d-none')
+        generate_shipping_policy(data_answer)
     })
 
     function toggle_show_hide_step(currentStep) {
