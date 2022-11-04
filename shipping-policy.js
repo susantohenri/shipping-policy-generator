@@ -6,6 +6,7 @@ $(document).ready(function () {
     let form = $('#shipping_policy_form')
     let doneBtn = $('#done_btn')
     let copy = $('#copy_btn')
+    let generateBtn = $('#btn_shipping_form')
 
     let data_answer = {}
     let currentStep = 0
@@ -16,6 +17,11 @@ $(document).ready(function () {
     })
 
     generate_shipping_policy(data_answer)
+
+    generateBtn.on('click', function() {
+        $('#shipping_policy_generator_form_container').removeClass('d-none')
+        $(this).parent().addClass('d-none')
+    })
 
     previewBtn.on('click', function () {
         console.log(data_answer)

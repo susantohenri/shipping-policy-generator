@@ -1,54 +1,54 @@
-#result .result-preview {
+#shipping_policy_generator #result .result-preview {
     font-size: 12px;
 }
 
-#result .result-preview .shipping-policy-section {
+#shipping_policy_generator #result .result-preview .shipping-policy-section {
     padding-bottom: 0px;
 }
 
-#result .result-preview h2{
+#shipping_policy_generator #result .result-preview h2{
     font-size: 16px;
 }
 
-#result .result-preview h4{
+#shipping_policy_generator #result .result-preview h4{
     font-size: 14px;
     margin-bottom: 4px;
 }
 
-#result .result-preview h6{
+#shipping_policy_generator #result .result-preview h6{
     font-size: 12px;
     margin-bottom: 4px;
 }
 
-.btn-copy {
+#shipping_policy_generator .btn-copy {
     background-color: #ff9100;
     padding: 6px 18px;
     border: none;
 }
 
-.btn-copy:focus {
+#shipping_policy_generator .btn-copy:focus {
     opacity: 0.5;
 }
 
-.form-check-label {
+#shipping_policy_generator .form-check-label {
     cursor: pointer;
 }
 
-.navigation a {
+#shipping_policy_generator .navigation a {
     text-decoration: none;
     color: #000;
     font-weight: 500;
 }
 
-.shipping-policy-title {
+#shipping_policy_generator .shipping-policy-title {
     padding-bottom: 12px;
 }
 
-.shipping-policy-section {
+#shipping_policy_generator .shipping-policy-section {
     padding-bottom: 26px;
 }
 
-.preview-content {
+#shipping_policy_generator .preview-content {
     height: 200px;
     background-color: white;
     font-size: 4px;
@@ -56,36 +56,36 @@
     padding: 10px;
 }
 
-.preview-content h2 {
+#shipping_policy_generator .preview-content h2 {
     font-size: 8px;
 }
 
-.preview-content h4 {
+#shipping_policy_generator .preview-content h4 {
     font-size: 6px;
     margin-bottom: 4px;
 }
 
-.preview-content h6 {
+#shipping_policy_generator .preview-content h6 {
     font-size: 4px;
 }
 
-.preview-content .mb-3 {
+#shipping_policy_generator .preview-content .mb-3 {
     margin-bottom: 8px !important;
 }
 
-.preview-content p {
+#shipping_policy_generator .preview-content p {
     margin-bottom: 4px;
 }
 
-.preview-content .shipping-policy-title {
+#shipping_policy_generator .preview-content .shipping-policy-title {
     padding-bottom: 4px;
 }
 
-.preview-content .shipping-policy-section {
+#shipping_policy_generator .preview-content .shipping-policy-section {
     padding-bottom: 6px;
 }
 
-#result_modal .modal-fullscreen {
+#shipping_policy_generator #result_modal .modal-fullscreen {
     width: 70vw;
     margin-left: auto;
     margin-right: auto;
