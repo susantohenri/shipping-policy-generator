@@ -34,6 +34,7 @@ jQuery(document).ready(function () {
     })
 
     copy.on('click', function (event) {
+        event.preventDefault()
         let temp = jQuery('<div></div>')
         jQuery('body').append(temp)
         temp.attr('contenteditable', true)
