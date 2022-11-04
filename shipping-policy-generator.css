@@ -1,5 +1,33 @@
-#shipping_policy_generator #shipping_form {
-    display: none;
+#shipping_policy_generator #result .result-preview {
+    font-size: 12px;
+}
+
+#shipping_policy_generator #result .result-preview .shipping-policy-section {
+    padding-bottom: 0px;
+}
+
+#shipping_policy_generator #result .result-preview h2{
+    font-size: 16px;
+}
+
+#shipping_policy_generator #result .result-preview h4{
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+#shipping_policy_generator #result .result-preview h6{
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+#shipping_policy_generator .btn-copy {
+    background-color: #ff9100;
+    padding: 6px 18px;
+    border: none;
+}
+
+#shipping_policy_generator .btn-copy:focus {
+    opacity: 0.5;
 }
 
 #shipping_policy_generator .form-check-label {
@@ -12,8 +40,12 @@
     font-weight: 500;
 }
 
+#shipping_policy_generator .shipping-policy-title {
+    padding-bottom: 12px;
+}
+
 #shipping_policy_generator .shipping-policy-section {
-    padding-bottom: 10px;
+    padding-bottom: 26px;
 }
 
 #shipping_policy_generator .preview-content {
@@ -24,16 +56,16 @@
     padding: 10px;
 }
 
-#shipping_policy_generator .preview-content h1 {
+#shipping_policy_generator .preview-content h2 {
     font-size: 8px;
 }
 
-#shipping_policy_generator .preview-content h2 {
+#shipping_policy_generator .preview-content h4 {
     font-size: 6px;
     margin-bottom: 4px;
 }
 
-#shipping_policy_generator .preview-content h4 {
+#shipping_policy_generator .preview-content h6 {
     font-size: 4px;
 }
 
@@ -45,6 +77,18 @@
     margin-bottom: 4px;
 }
 
+#shipping_policy_generator .preview-content .shipping-policy-title {
+    padding-bottom: 4px;
+}
+
 #shipping_policy_generator .preview-content .shipping-policy-section {
     padding-bottom: 6px;
+}
+
+#shipping_policy_generator #result_modal .modal-fullscreen {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    height: 85%;
 }
