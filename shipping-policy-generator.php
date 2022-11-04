@@ -70,7 +70,7 @@ add_shortcode('shipping-policy-generator', function () {
                             <div>
                                 <p class='text-muted'>
                                     These sample policies should not be taken as legal advice. By using this for your store,
-                                    you agree to <a href=''></a>
+                                    you agree to this
                                 </p>
                             </div>
                         </div>
