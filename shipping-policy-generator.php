@@ -40,7 +40,7 @@ add_shortcode('shipping-policy-generator', function () {
     return "
         <div id='shipping_policy_generator'>
             <div class='text-center p-4'>
-                <button id='btn_shipping_form' class='btn btn-primary'>Generate Shipping Policy</button>
+                <button id='btn_shipping_form' class='btn btn-primary btn-lg'>Click Here To Generate Policy</button>
             </div>
             <div id='result' class='d-none'>
                 <div class='row m-0'>
@@ -53,7 +53,7 @@ add_shortcode('shipping-policy-generator', function () {
                                     </p>
                                 </div>
 
-                                <button id='copy_btn' class='btn-copy text-uppercase'>COPY TO CLIPBOARD</button>
+                                <button id='copy_btn' class='btn btn-copy text-uppercase'>COPY TO CLIPBOARD</button>
                             </div>
                         </div>
                     </div>
