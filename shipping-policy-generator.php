@@ -48,9 +48,9 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                 <div class='row m-0'>
                     <div class='col-md-6'>
                         <div class='d-flex align-items-center vh-100'>
-                            <div class='p-5'>
+                            <div class='p-2'>
                                 <div class='mb-4'>
-                                    <h1>Here's your new policy</h1>
+                                    <h2>Here's your new policy</h2>
                                     <p class='' style='font-size: 20px;'>Click Here To Generate Shipping Policy</p>
                                 </div>
 
@@ -59,13 +59,13 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                         </div>
                     </div>
                     <div class='col-md-6'>
-                        <div class='d-flex flex-column justify-content-center vh-100 gap-4 pe-5'>
-                            <div class='shadow p-4' style='height: 70vh;'>
+                        <div class='d-flex flex-column justify-content-center vh-100 gap-4 pe-2'>
+                            <div class='shadow p-4'>
                                 <div class='border-bottom pb-2'>
                                     <h3>Shipping Policy</h3>
                                 </div>
-                                <div class='my-4' style='overflow: auto; height: 80%;'>
-                                    <div class='shipping_policy_template result-preview'></div>
+                                <div class='my-4'>
+                                    <div class='shipping_policy_template result-preview' style='height: 50vh; overflow: auto;'></div>
                                 </div>
                             </div>
                             <div>
@@ -948,12 +948,15 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                                                     <input type='text' name='contact_form' class='form-control' placeholder='Contact Form'>
                                                 </div>
                                             </div>
-                                            <div class='form-check form-contact'>
+                                            <div class='form-check form-others'>
                                                 <input class='form-check-input' type='radio'
                                                     name='customer_get_in_touch_with_you' id='q_22_d' value=''>
                                                 <label class='form-check-label' for='q_22_d'>
                                                     Set all contact info manually
                                                 </label>
+                                                <div class='form-group d-none'>
+                                                    <input type='text' name='contact_info' class='form-control' placeholder='Contact Info'>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

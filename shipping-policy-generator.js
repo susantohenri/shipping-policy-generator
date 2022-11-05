@@ -1,9 +1,4 @@
 jQuery(document).ready(function () {
-    jQuery('#shipping_policy_generator #btn_shipping_form').click(function () {
-        jQuery(this).hide()
-        jQuery(this).siblings().show()
-    })
-
     let step = jQuery('#shipping_policy_generator .step')
     let backBtn = jQuery('#shipping_policy_generator #back_btn')
     let nextBtn = jQuery('#shipping_policy_generator #next_btn')
@@ -150,30 +145,6 @@ jQuery(document).ready(function () {
                         [name]: e.target.value,
                     }
                 })
-            } else if (jQuery(this).parent().hasClass('form-contact')) {
-                jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).removeClass('d-none')
-
-                data_answer = {
-                    ...data_answer,
-                    [name]: {
-                        contact_phone: jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).find(jQuery('input[type="text"][name="contact_phone"]')).val(),
-                        contact_email: jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).find(jQuery('input[type="text"][name="contact_email"]')).val(),
-                        contact_form: jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).find(jQuery('input[type="text"][name="contact_form"]')).val(),
-                    }
-                }
-                
-                jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).find(jQuery('input[type="text"]')).each(function() {
-                    jQuery(this).on('keyup', function (e) {
-                        data_answer = {
-                            ...data_answer,
-                            [name]: {
-                                contact_phone: jQuery(this).parent().parent().parent().find(jQuery('input[type="text"][name="contact_phone"]')).val(),
-                                contact_email: jQuery(this).parent().parent().parent().find(jQuery('input[type="text"][name="contact_email"]')).val(),
-                                contact_form: jQuery(this).parent().parent().parent().find(jQuery('input[type="text"][name="contact_form"]')).val()
-                            }
-                        }
-                    })
-                })
             } else {
                 jQuery(this).parent().parent().find(jQuery('#shipping_policy_generator .form-group')).addClass('d-none')
             }
@@ -244,14 +215,7 @@ jQuery(document).ready(function () {
 
                             <h6>Contact</h6>
                             <p>
-                                You can always contact us for any queries. We are available at
-                                ${(() => {
-                                    if (data.customer_get_in_touch_with_you?.contact_phone !== undefined) {
-                                        return `phone: ${data.customer_get_in_touch_with_you?.contact_phone}, email: ${data.customer_get_in_touch_with_you?.contact_email}, or form: ${data.customer_get_in_touch_with_you?.contact_form}`
-                                    } else {
-                                        return data.customer_get_in_touch_with_you
-                                    }
-                                })()}.
+                                You can always contact us for any queries. We are available at ${data.customer_get_in_touch_with_you}.
                             </p>
                         </div>
                         <div class="shipping-policy-section">
@@ -290,7 +254,9 @@ jQuery(document).ready(function () {
                                 You can select the best shipping method for your needs when you order from our store. We offer the following shipping options:
                             </p>
 
-                            ${data.shipping_work}
+                            <p>
+                                ${data.shipping_work}
+                            </p>
 
                             <h6>Shipping Costs</h6>
                             <p>
