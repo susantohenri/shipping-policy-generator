@@ -9,7 +9,7 @@ $(document).ready(function () {
     let generateBtn = $('#btn_shipping_form')
 
     let data_answer = {}
-    let currentStep = 21
+    let currentStep = 0
     let totalSteps = step.length
 
     form.on('submit', function (e) {
