@@ -54,7 +54,7 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                                     <p class='' style='font-size: 20px;'>Click Here To Generate Shipping Policy</p>
                                 </div>
 
-                                <button id='copy_btn' class='btn btn-primary text-uppercase'>COPY TO CLIPBOARD</button>
+                                <button id='copy_btn' class='btn btn-primary'>COPY TO CLIPBOARD</button>
                             </div>
                         </div>
                     </div>
