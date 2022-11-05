@@ -20,7 +20,9 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-add_shortcode('shipping-policy-generator', function () {
+add_shortcode('shipping-policy-generator', function ($atts) {
+    $atts = shortcode_atts(['disclaimer-link' => ''], $atts);
+    $disclaimer_link = $atts['disclaimer-link'];
 
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.6.1.js');
     wp_enqueue_script('jquery');
@@ -40,7 +42,7 @@ add_shortcode('shipping-policy-generator', function () {
     return "
         <div id='shipping_policy_generator'>
             <div class='text-center p-4'>
-                <button id='btn_shipping_form' class='btn btn-primary btn-lg'>Click Here To Generate Policy</button>
+                <button id='btn_shipping_form' class='btn btn-primary btn-lg'>Click Here To Generate Shipping Policy</button>
             </div>
             <div id='result' class='d-none'>
                 <div class='row m-0'>
@@ -49,10 +51,8 @@ add_shortcode('shipping-policy-generator', function () {
                             <div class='p-5'>
                                 <div class='mb-4'>
                                     <h1>Here's your new policy</h1>
-                                    <p class='' style='font-size: 20px;'>Click the button below to copy your shipping policy
-                                    </p>
+                                    <p class='' style='font-size: 20px;'>Click Here To Generate Shipping Policy</p>
                                 </div>
-
                                 <button id='copy_btn' class='btn btn-copy text-uppercase'>COPY TO CLIPBOARD</button>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ add_shortcode('shipping-policy-generator', function () {
                             <div>
                                 <p class='text-muted'>
                                     These sample policies should not be taken as legal advice. By using this for your store,
-                                    you agree to this
+                                    you agree to <a href='{$disclaimer_link}'>this disclaimer</a>
                                 </p>
                             </div>
                         </div>
