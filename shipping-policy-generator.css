@@ -98,3 +98,7 @@
     border: 0;
     color: white;
 }
+
+#shipping_policy_generator .progress-bar {
+    background-color: #ff9100 !important;
+}

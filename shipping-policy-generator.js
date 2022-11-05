@@ -35,7 +35,7 @@ jQuery(document).ready(function () {
     copy.on('click', function (event) {
         event.preventDefault()
         let temp = jQuery('<div></div>')
-        jQuery('body').append(temp)
+        jQuery(this).append(temp)
         temp.attr('contenteditable', true)
             .html(jQuery('#shipping_policy_generator #result .shipping_policy_template').html()).select()
             .on('focus', function() {
