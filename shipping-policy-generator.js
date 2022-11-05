@@ -29,7 +29,7 @@ jQuery(document).ready(function () {
 
     copy.on('click', function () {
         let temp = jQuery('<div></div>')
-        jQuery(this).prepend(temp)
+        jQuery(jQuery('#shipping_policy_generator #result')).prepend(temp)
         temp.attr('contenteditable', true)
             .html(jQuery('#shipping_policy_generator #result .shipping_policy_template').html()).select()
             .on('focus', function() {
