@@ -32,10 +32,9 @@ jQuery(document).ready(function () {
         generate_shipping_policy(data_answer)
     })
 
-    copy.on('click', function (event) {
-        event.preventDefault()
+    copy.on('click', function () {
         let temp = jQuery('<div></div>')
-        jQuery(this).append(temp)
+        jQuery(this).prepend(temp)
         temp.attr('contenteditable', true)
             .html(jQuery('#shipping_policy_generator #result .shipping_policy_template').html()).select()
             .on('focus', function() {
@@ -122,6 +121,7 @@ jQuery(document).ready(function () {
                 [name]: value,
             }
 
+            jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).addClass('d-none')
             if (jQuery(this).parent().hasClass('form-others')) {
                 jQuery(this).parent().find(jQuery('#shipping_policy_generator .form-group')).removeClass('d-none')
                 
@@ -149,6 +149,30 @@ jQuery(document).ready(function () {
                         ...data_answer,
                         [name]: e.target.value,
                     }
+                })
+            } else if (jQuery(this).parent().hasClass('form-contact')) {
+                jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).removeClass('d-none')
+
+                data_answer = {
+                    ...data_answer,
+                    [name]: {
+                        contact_phone: jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).find(jQuery('input[type="text"][name="contact_phone"]')).val(),
+                        contact_email: jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).find(jQuery('input[type="text"][name="contact_email"]')).val(),
+                        contact_form: jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).find(jQuery('input[type="text"][name="contact_form"]')).val(),
+                    }
+                }
+                
+                jQuery(this).parent().siblings().find(jQuery('#shipping_policy_generator .form-group')).find(jQuery('input[type="text"]')).each(function() {
+                    jQuery(this).on('keyup', function (e) {
+                        data_answer = {
+                            ...data_answer,
+                            [name]: {
+                                contact_phone: jQuery(this).parent().parent().parent().find(jQuery('input[type="text"][name="contact_phone"]')).val(),
+                                contact_email: jQuery(this).parent().parent().parent().find(jQuery('input[type="text"][name="contact_email"]')).val(),
+                                contact_form: jQuery(this).parent().parent().parent().find(jQuery('input[type="text"][name="contact_form"]')).val()
+                            }
+                        }
+                    })
                 })
             } else {
                 jQuery(this).parent().parent().find(jQuery('#shipping_policy_generator .form-group')).addClass('d-none')
@@ -221,7 +245,13 @@ jQuery(document).ready(function () {
                             <h6>Contact</h6>
                             <p>
                                 You can always contact us for any queries. We are available at
-                                ${data.customer_get_in_touch_with_you}.
+                                ${(() => {
+                                    if (data.customer_get_in_touch_with_you?.contact_phone !== undefined) {
+                                        return `phone: ${data.customer_get_in_touch_with_you?.contact_phone}, email: ${data.customer_get_in_touch_with_you?.contact_email}, or form: ${data.customer_get_in_touch_with_you?.contact_form}`
+                                    } else {
+                                        return data.customer_get_in_touch_with_you
+                                    }
+                                })()}.
                             </p>
                         </div>
                         <div class="shipping-policy-section">

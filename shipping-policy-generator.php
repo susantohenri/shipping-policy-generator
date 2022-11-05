@@ -42,7 +42,7 @@ add_shortcode('shipping-policy-generator', function ($atts) {
     return "
         <div id='shipping_policy_generator'>
             <div class='text-center p-4'>
-                <button id='btn_shipping_form' class='btn btn-primary btn-lg'>Click Here To Generate Shipping Policy</button>
+                <button id='btn_shipping_form' class='btn-lg btn btn-primary'>Click Here To Generate Shipping Policy</button>
             </div>
             <div id='result' class='d-none'>
                 <div class='row m-0'>
@@ -54,7 +54,7 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                                     <p class='' style='font-size: 20px;'>Click Here To Generate Shipping Policy</p>
                                 </div>
 
-                                <button id='copy_btn' class='btn btn-copy text-uppercase'>COPY TO CLIPBOARD</button>
+                                <button id='copy_btn' class='btn btn-primary text-uppercase'>COPY TO CLIPBOARD</button>
                             </div>
                         </div>
                     </div>
@@ -709,14 +709,22 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                                                     Installments are available
                                                 </label>
                                             </div>
+                                            <div class='form-check'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='do_you_offer_any_special_payment_plans' id='q_16_b'
+                                                    value='No'>
+                                                <label class='form-check-label' for='q_16_b'>
+                                                    No, we do not offer any payment plans
+                                                </label>
+                                            </div>
                                             <div class='form-check form-others'>
-                                                <input class='form-check-input' type='radio' id='q_16_e'
+                                                <input class='form-check-input' type='radio' id='q_16_c'
                                                     name='do_you_offer_any_special_payment_plans' value=''>
-                                                <label class='form-check-label' for='q_16_e'>
+                                                <label class='form-check-label' for='q_16_c'>
                                                     Other payment plans are available on request (Please specify the type)
                                                 </label>
-                                                <div class='form-group d-none' id='q_16_e_input_wrapper'>
-                                                    <input type='text' id='q_16_e_input' class='form-control'>
+                                                <div class='form-group d-none' id='q_16_c_input_wrapper'>
+                                                    <input type='text' id='q_16_c_input' class='form-control'>
                                                 </div>
                                             </div>
                                         </div>
@@ -910,19 +918,25 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                                         </h5>
 
                                         <div>
-                                            <div class='form-check'>
+                                            <div class='form-check form-others'>
                                                 <input class='form-check-input' type='radio'
                                                     name='customer_get_in_touch_with_you' id='q_22_a' value='phone'>
                                                 <label class='form-check-label' for='q_22_a'>
                                                     Phone
                                                 </label>
+                                                <div class='form-group d-none'>
+                                                    <input type='text' name='contact_phone' class='form-control' placeholder='Phone'>
+                                                </div>
                                             </div>
-                                            <div class='form-check'>
+                                            <div class='form-check form-others'>
                                                 <input class='form-check-input' type='radio'
                                                     name='customer_get_in_touch_with_you' id='q_22_b' value='email'>
                                                 <label class='form-check-label' for='q_22_b'>
                                                     Email
                                                 </label>
+                                                <div class='form-group d-none'>
+                                                    <input type='text' name='contact_email' class='form-control' placeholder='Email'>
+                                                </div>
                                             </div>
                                             <div class='form-check form-others'>
                                                 <input class='form-check-input' type='radio'
@@ -930,10 +944,16 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                                                 <label class='form-check-label' for='q_22_c'>
                                                     We have a contact form
                                                 </label>
-                                                <div class='form-group'>
-                                                    <label class='text-muted'>Please specify in the section below</label>
-                                                    <input type='text' class='form-control'>
+                                                <div class='form-group d-none'>
+                                                    <input type='text' name='contact_form' class='form-control' placeholder='Contact Form'>
                                                 </div>
+                                            </div>
+                                            <div class='form-check form-contact'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='customer_get_in_touch_with_you' id='q_22_d' value=''>
+                                                <label class='form-check-label' for='q_22_d'>
+                                                    Set all contact info manually
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
@@ -1077,7 +1097,7 @@ add_shortcode('shipping-policy-generator', function ($atts) {
 
                                 <div class='d-flex justify-content-between pt-4'>
                                     <div>
-                                        <button id='back_btn' class='btn btn-outline-primary'>BACK</button>
+                                        <button id='back_btn' class='btn btn-primary'>BACK</button>
                                     </div>
                                     <div>
                                         <button id='next_btn' class='btn btn-primary'>NEXT</button>
@@ -1091,7 +1111,7 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                                 <div class='preview-content rounded'></div>
                             </div>
                             <div class='d-grid pt-4'>
-                                <button id='preview_btn' class='btn btn-outline-primary' data-bs-toggle='modal'
+                                <button id='preview_btn' class='btn btn-primary' data-bs-toggle='modal'
                                     data-bs-target='#result_modal'>PREVIEW</button>
                             </div>
                         </div>
