@@ -53,6 +53,7 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                                     <h1>Here's your new policy</h1>
                                     <p class='' style='font-size: 20px;'>Click Here To Generate Shipping Policy</p>
                                 </div>
+
                                 <button id='copy_btn' class='btn btn-copy text-uppercase'>COPY TO CLIPBOARD</button>
                             </div>
                         </div>
@@ -83,8 +84,8 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                     <div class='px-4 pb-3 border-bottom' style='width: 200px;'>
                         <h6>Progress</h6>
                         <div class='progress'>
-                            <div id='progress_bar' class='progress-bar' role='progressbar' style='width: 0%;' aria-valuemin='0'
-                                aria-valuemax='100'></div>
+                            <div id='progress_bar' class='progress-bar' role='progressbar' style='width: 0%;'
+                                aria-valuemin='0' aria-valuemax='100'></div>
                         </div>
                     </div>
                     <div class='py-4' style='width: 200px;'>
@@ -307,22 +308,24 @@ add_shortcode('shipping-policy-generator', function ($atts) {
 
                                         <div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='offer_free_shipping_services'
-                                                    id='q_7_a' value='Yes, depending on the distance of the delivery'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='offer_free_shipping_services' id='q_7_a'
+                                                    value='Yes, depending on the distance of the delivery'>
                                                 <label class='form-check-label' for='q_7_a'>
                                                     Yes, depending on the distance of the delivery
                                                 </label>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='offer_free_shipping_services'
-                                                    id='q_7_b' value='No, we do not offer free delivery'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='offer_free_shipping_services' id='q_7_b'
+                                                    value='No, we do not offer free delivery'>
                                                 <label class='form-check-label' for='q_7_b'>
                                                     No, we do not offer free delivery
                                                 </label>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='offer_free_shipping_services'
-                                                    id='q_7_c'
+                                                <input class='form-check-input' type='radio'
+                                                    name='offer_free_shipping_services' id='q_7_c'
                                                     value='Our free delivery is limited to customers with premium memberships'>
                                                 <label class='form-check-label' for='q_7_c'>
                                                     Our free delivery is limited to customers with premium memberships
@@ -388,15 +391,15 @@ add_shortcode('shipping-policy-generator', function ($atts) {
 
                                         <div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='do_you_have_return_policy'
-                                                    id='q_9_a' value='Yes'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='do_you_have_return_policy' id='q_9_a' value='Yes'>
                                                 <label class='form-check-label' for='q_9_a'>
                                                     Yes
                                                 </label>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='do_you_have_return_policy'
-                                                    id='q_9_b' value='No'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='do_you_have_return_policy' id='q_9_b' value='No'>
                                                 <label class='form-check-label' for='q_9_b'>
                                                     No
                                                 </label>
@@ -827,29 +830,29 @@ add_shortcode('shipping-policy-generator', function ($atts) {
 
                                         <div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='in_store_curbside_pickups'
-                                                    id='q_20_a' value='In-store'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='in_store_curbside_pickups' id='q_20_a' value='In-store'>
                                                 <label class='form-check-label' for='q_20_a'>
                                                     In-store
                                                 </label>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='in_store_curbside_pickups'
-                                                    id='q_20_b' value='Curbside'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='in_store_curbside_pickups' id='q_20_b' value='Curbside'>
                                                 <label class='form-check-label' for='q_20_b'>
                                                     Curbside
                                                 </label>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='in_store_curbside_pickups'
-                                                    id='q_20_c' value='Both'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='in_store_curbside_pickups' id='q_20_c' value='Both'>
                                                 <label class='form-check-label' for='q_20_c'>
                                                     Both
                                                 </label>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='in_store_curbside_pickups'
-                                                    id='q_20_d' value='Neither'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='in_store_curbside_pickups' id='q_20_d' value='Neither'>
                                                 <label class='form-check-label' for='q_20_d'>
                                                     Neither
                                                 </label>
@@ -943,29 +946,32 @@ add_shortcode('shipping-policy-generator', function ($atts) {
 
                                         <div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='tracking_id_stop_updating'
-                                                    id='q_23_a' value='Talk to our customer care executive'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='tracking_id_stop_updating' id='q_23_a'
+                                                    value='Talk to our customer care executive'>
                                                 <label class='form-check-label' for='q_23_a'>
                                                     Talk to our customer care executive
                                                 </label>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='tracking_id_stop_updating'
-                                                    id='q_23_b' value='Contact us via email/phone/contact form'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='tracking_id_stop_updating' id='q_23_b'
+                                                    value='Contact us via email/phone/contact form'>
                                                 <label class='form-check-label' for='q_23_b'>
                                                     Contact us via email/phone/contact form
                                                 </label>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='tracking_id_stop_updating'
-                                                    id='q_23_c' value='Talk to us on chat'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='tracking_id_stop_updating' id='q_23_c' value='Talk to us on chat'>
                                                 <label class='form-check-label' for='q_23_c'>
                                                     Talk to us on chat
                                                 </label>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='tracking_id_stop_updating'
-                                                    id='q_23_d' value='Refresh their page to see a changed status'>
+                                                <input class='form-check-input' type='radio'
+                                                    name='tracking_id_stop_updating' id='q_23_d'
+                                                    value='Refresh their page to see a changed status'>
                                                 <label class='form-check-label' for='q_23_d'>
                                                     Refresh their page to see a changed status
                                                 </label>
@@ -1016,8 +1022,8 @@ add_shortcode('shipping-policy-generator', function ($atts) {
 
                                         <div>
                                             <div class='form-check form-others'>
-                                                <input class='form-check-input' type='radio' name='physical_store' id='q_25_a'
-                                                    value=''>
+                                                <input class='form-check-input' type='radio' name='physical_store'
+                                                    id='q_25_a' value=''>
                                                 <label class='form-check-label' for='q_25_a'>
                                                     Yes
                                                 </label>
@@ -1027,8 +1033,8 @@ add_shortcode('shipping-policy-generator', function ($atts) {
                                                 </div>
                                             </div>
                                             <div class='form-check'>
-                                                <input class='form-check-input' type='radio' name='physical_store' id='q_25_b'
-                                                    value='No'>
+                                                <input class='form-check-input' type='radio' name='physical_store'
+                                                    id='q_25_b' value='No'>
                                                 <label class='form-check-label' for='q_25_b'>
                                                     No
                                                 </label>

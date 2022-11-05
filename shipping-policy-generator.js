@@ -1,5 +1,5 @@
 jQuery(document).ready(function () {
-    jQuery('#btn_shipping_form').click(function () {
+    jQuery('#shipping_policy_generator #btn_shipping_form').click(function () {
         jQuery(this).hide()
         jQuery(this).siblings().show()
     })
@@ -29,7 +29,6 @@ jQuery(document).ready(function () {
     })
 
     previewBtn.on('click', function () {
-        console.log(data_answer)
         generate_shipping_policy(data_answer)
     })
 
