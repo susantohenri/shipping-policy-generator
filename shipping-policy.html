@@ -686,14 +686,22 @@
                                                 Installments are available
                                             </label>
                                         </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio"
+                                                name="do_you_offer_any_special_payment_plans" id="q_16_b"
+                                                value="No">
+                                            <label class="form-check-label" for="q_16_b">
+                                                No, we do not offer any payment plans
+                                            </label>
+                                        </div>
                                         <div class="form-check form-others">
-                                            <input class="form-check-input" type="radio" id="q_16_e"
+                                            <input class="form-check-input" type="radio" id="q_16_c"
                                                 name="do_you_offer_any_special_payment_plans" value="">
-                                            <label class="form-check-label" for="q_16_e">
+                                            <label class="form-check-label" for="q_16_c">
                                                 Other payment plans are available on request (Please specify the type)
                                             </label>
-                                            <div class="form-group d-none" id="q_16_e_input_wrapper">
-                                                <input type="text" id="q_16_e_input" class="form-control">
+                                            <div class="form-group d-none" id="q_16_c_input_wrapper">
+                                                <input type="text" id="q_16_c_input" class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -887,19 +895,25 @@
                                     </h5>
 
                                     <div>
-                                        <div class="form-check">
+                                        <div class="form-check form-others">
                                             <input class="form-check-input" type="radio"
                                                 name="customer_get_in_touch_with_you" id="q_22_a" value="phone">
                                             <label class="form-check-label" for="q_22_a">
                                                 Phone
                                             </label>
+                                            <div class="form-group d-none">
+                                                <input type="text" name="contact_phone" class="form-control" placeholder="Phone">
+                                            </div>
                                         </div>
-                                        <div class="form-check">
+                                        <div class="form-check form-others">
                                             <input class="form-check-input" type="radio"
                                                 name="customer_get_in_touch_with_you" id="q_22_b" value="email">
                                             <label class="form-check-label" for="q_22_b">
                                                 Email
                                             </label>
+                                            <div class="form-group d-none">
+                                                <input type="text" name="contact_email" class="form-control" placeholder="Email">
+                                            </div>
                                         </div>
                                         <div class="form-check form-others">
                                             <input class="form-check-input" type="radio"
@@ -907,10 +921,16 @@
                                             <label class="form-check-label" for="q_22_c">
                                                 We have a contact form
                                             </label>
-                                            <div class="form-group">
-                                                <label class="text-muted">Please specify in the section below</label>
-                                                <input type="text" class="form-control">
+                                            <div class="form-group d-none">
+                                                <input type="text" name="contact_form" class="form-control">
                                             </div>
+                                        </div>
+                                        <div class="form-check form-contact">
+                                            <input class="form-check-input" type="radio"
+                                                name="customer_get_in_touch_with_you" id="q_22_d" value="">
+                                            <label class="form-check-label" for="q_22_d">
+                                                Set all contact info manually
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
