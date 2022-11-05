@@ -146,30 +146,6 @@ $(document).ready(function () {
                         [name]: e.target.value,
                     }
                 })
-            } else if ($(this).parent().hasClass('form-contact')) {
-                $(this).parent().siblings().find($('.form-group')).removeClass('d-none')
-
-                data_answer = {
-                    ...data_answer,
-                    [name]: {
-                        contact_phone: $(this).parent().siblings().find($('.form-group')).find($('input[type="text"][name="contact_phone"]')).val(),
-                        contact_email: $(this).parent().siblings().find($('.form-group')).find($('input[type="text"][name="contact_email"]')).val(),
-                        contact_form: $(this).parent().siblings().find($('.form-group')).find($('input[type="text"][name="contact_form"]')).val(),
-                    }
-                }
-                
-                $(this).parent().siblings().find($('.form-group')).find($('input[type="text"]')).each(function() {
-                    $(this).on('keyup', function (e) {
-                        data_answer = {
-                            ...data_answer,
-                            [name]: {
-                                contact_phone: $(this).parent().parent().parent().find($('input[type="text"][name="contact_phone"]')).val(),
-                                contact_email: $(this).parent().parent().parent().find($('input[type="text"][name="contact_email"]')).val(),
-                                contact_form: $(this).parent().parent().parent().find($('input[type="text"][name="contact_form"]')).val()
-                            }
-                        }
-                    })
-                })
             } else {
                 $(this).parent().parent().find($('.form-group')).addClass('d-none')
             }
@@ -240,14 +216,7 @@ $(document).ready(function () {
 
                             <h6>Contact</h6>
                             <p>
-                                You can always contact us for any queries. We are available at
-                                ${(() => {
-                                    if (data.customer_get_in_touch_with_you?.contact_phone !== undefined) {
-                                        return `phone: ${data.customer_get_in_touch_with_you?.contact_phone}, email: ${data.customer_get_in_touch_with_you?.contact_email}, or form: ${data.customer_get_in_touch_with_you?.contact_form}`
-                                    } else {
-                                        return data.customer_get_in_touch_with_you
-                                    }
-                                })()}.
+                                You can always contact us for any queries. We are available at ${data.customer_get_in_touch_with_you}.
                             </p>
                         </div>
                         <div class="shipping-policy-section">
