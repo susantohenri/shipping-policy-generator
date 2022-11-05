@@ -1,3 +1,8 @@
+#shipping_policy_generator .btn-primary {
+    background-color: #ff9100;
+    border: none;
+}
+
 #shipping_policy_generator #result .result-preview {
     font-size: 12px;
 }
@@ -18,12 +23,6 @@
 #shipping_policy_generator #result .result-preview h6{
     font-size: 12px;
     margin-bottom: 4px;
-}
-
-#shipping_policy_generator .btn-copy {
-    background-color: #ff9100;
-    padding: 6px 18px;
-    border: none;
 }
 
 #shipping_policy_generator .btn-copy:focus {
